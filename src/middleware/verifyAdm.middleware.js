@@ -11,7 +11,7 @@ const verifyIsAdmMiddleware = (request, response, next) => {
 
     if (user && !user.isAdm) {
       return response
-        .status(400)
+        .status(401)
         .json({ message: "Missing authorization headers" });
     }
   }

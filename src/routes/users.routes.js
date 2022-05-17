@@ -27,7 +27,7 @@ router.delete(
   verifyAuthMiddleware,
   deleteUserController
 );
-router.put(
+router.patch(
   "/:id",
   verifyIsAdmMiddleware,
   verifyAuthMiddleware,

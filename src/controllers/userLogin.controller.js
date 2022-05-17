@@ -5,6 +5,10 @@ const userLoginController = (request, response) => {
 
   const user = userLoginService(email, password);
 
+  if ("Message" in user) {
+    return response.status(401).json(user);
+  }
+
   return response.status(200).json(user);
 };
 
